@@ -10,10 +10,18 @@
 		92094E2523F6A07F00F94221 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92094E2423F6A07F00F94221 /* AppDelegate.swift */; };
 		92094E2723F6A07F00F94221 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92094E2623F6A07F00F94221 /* SceneDelegate.swift */; };
 		92094E2923F6A07F00F94221 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92094E2823F6A07F00F94221 /* ViewController.swift */; };
-		92094E2C23F6A07F00F94221 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92094E2A23F6A07F00F94221 /* Main.storyboard */; };
 		92094E2E23F6A08200F94221 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92094E2D23F6A08200F94221 /* Assets.xcassets */; };
 		92094E3123F6A08200F94221 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92094E2F23F6A08200F94221 /* LaunchScreen.storyboard */; };
 		92094E3C23F6A08200F94221 /* RobustFeedsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92094E3B23F6A08200F94221 /* RobustFeedsTests.swift */; };
+		92094E4723F6AAC000F94221 /* Loadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92094E4623F6AAC000F94221 /* Loadable.swift */; };
+		92094E4B23F6C0A200F94221 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92094E4A23F6C0A200F94221 /* FeedViewModel.swift */; };
+		92094E4D23F6C95E00F94221 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92094E4C23F6C95E00F94221 /* LoadingViewController.swift */; };
+		92094E4F23F6CAF000F94221 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92094E4E23F6CAF000F94221 /* UIViewController+Extensions.swift */; };
+		92094E5223F6CC8400F94221 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92094E5123F6CC8400F94221 /* ErrorViewController.swift */; };
+		92094E5423F6CCFC00F94221 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92094E5323F6CCFC00F94221 /* UIView+Extensions.swift */; };
+		92094E5623F6CDD000F94221 /* NativeFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92094E5523F6CDD000F94221 /* NativeFeedViewController.swift */; };
+		92094E5823F6D2E700F94221 /* WebFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92094E5723F6D2E700F94221 /* WebFeedViewController.swift */; };
+		92094E5A23F6D72500F94221 /* Loaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92094E5923F6D72500F94221 /* Loaders.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +39,21 @@
 		92094E2423F6A07F00F94221 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92094E2623F6A07F00F94221 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		92094E2823F6A07F00F94221 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		92094E2B23F6A07F00F94221 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		92094E2D23F6A08200F94221 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92094E3023F6A08200F94221 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92094E3223F6A08200F94221 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92094E3723F6A08200F94221 /* RobustFeedsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RobustFeedsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92094E3B23F6A08200F94221 /* RobustFeedsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobustFeedsTests.swift; sourceTree = "<group>"; };
 		92094E3D23F6A08200F94221 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92094E4623F6AAC000F94221 /* Loadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loadable.swift; sourceTree = "<group>"; };
+		92094E4A23F6C0A200F94221 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		92094E4C23F6C95E00F94221 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		92094E4E23F6CAF000F94221 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		92094E5123F6CC8400F94221 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
+		92094E5323F6CCFC00F94221 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		92094E5523F6CDD000F94221 /* NativeFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeFeedViewController.swift; sourceTree = "<group>"; };
+		92094E5723F6D2E700F94221 /* WebFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebFeedViewController.swift; sourceTree = "<group>"; };
+		92094E5923F6D72500F94221 /* Loaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loaders.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,10 +98,17 @@
 				92094E2423F6A07F00F94221 /* AppDelegate.swift */,
 				92094E2623F6A07F00F94221 /* SceneDelegate.swift */,
 				92094E2823F6A07F00F94221 /* ViewController.swift */,
-				92094E2A23F6A07F00F94221 /* Main.storyboard */,
 				92094E2D23F6A08200F94221 /* Assets.xcassets */,
 				92094E2F23F6A08200F94221 /* LaunchScreen.storyboard */,
 				92094E3223F6A08200F94221 /* Info.plist */,
+				92094E4623F6AAC000F94221 /* Loadable.swift */,
+				92094E4A23F6C0A200F94221 /* FeedViewModel.swift */,
+				92094E4C23F6C95E00F94221 /* LoadingViewController.swift */,
+				92094E5123F6CC8400F94221 /* ErrorViewController.swift */,
+				92094E5023F6CC5200F94221 /* Extensions */,
+				92094E5523F6CDD000F94221 /* NativeFeedViewController.swift */,
+				92094E5723F6D2E700F94221 /* WebFeedViewController.swift */,
+				92094E5923F6D72500F94221 /* Loaders.swift */,
 			);
 			path = RobustFeeds;
 			sourceTree = "<group>";
@@ -97,6 +120,15 @@
 				92094E3D23F6A08200F94221 /* Info.plist */,
 			);
 			path = RobustFeedsTests;
+			sourceTree = "<group>";
+		};
+		92094E5023F6CC5200F94221 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				92094E4E23F6CAF000F94221 /* UIViewController+Extensions.swift */,
+				92094E5323F6CCFC00F94221 /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,7 +214,6 @@
 			files = (
 				92094E3123F6A08200F94221 /* LaunchScreen.storyboard in Resources */,
 				92094E2E23F6A08200F94221 /* Assets.xcassets in Resources */,
-				92094E2C23F6A07F00F94221 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,8 +232,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				92094E2923F6A07F00F94221 /* ViewController.swift in Sources */,
+				92094E4723F6AAC000F94221 /* Loadable.swift in Sources */,
+				92094E4B23F6C0A200F94221 /* FeedViewModel.swift in Sources */,
+				92094E5423F6CCFC00F94221 /* UIView+Extensions.swift in Sources */,
+				92094E4F23F6CAF000F94221 /* UIViewController+Extensions.swift in Sources */,
+				92094E5823F6D2E700F94221 /* WebFeedViewController.swift in Sources */,
+				92094E5A23F6D72500F94221 /* Loaders.swift in Sources */,
 				92094E2523F6A07F00F94221 /* AppDelegate.swift in Sources */,
+				92094E5223F6CC8400F94221 /* ErrorViewController.swift in Sources */,
 				92094E2723F6A07F00F94221 /* SceneDelegate.swift in Sources */,
+				92094E4D23F6C95E00F94221 /* LoadingViewController.swift in Sources */,
+				92094E5623F6CDD000F94221 /* NativeFeedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,14 +265,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		92094E2A23F6A07F00F94221 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				92094E2B23F6A07F00F94221 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		92094E2F23F6A08200F94221 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
