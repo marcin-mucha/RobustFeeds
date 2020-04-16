@@ -11,7 +11,7 @@ import UIKit
 class NativeFeedViewController: UITableViewController {
     private let feedItems: [FeedItem]
     
-    init(title: String, feedItems: [FeedItem]) {
+    init(title: String?, feedItems: [FeedItem]) {
         self.feedItems = feedItems
         super.init(nibName: nil, bundle: nil)
         tableView.register(FeedCell.self, forCellReuseIdentifier: "Feed")
@@ -22,7 +22,7 @@ class NativeFeedViewController: UITableViewController {
     }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
+        super.viewDidLoad() 
         tableView.reloadData()
     }
     

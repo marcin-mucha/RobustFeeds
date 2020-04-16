@@ -9,12 +9,12 @@
 import Foundation
 import Combine
 
-protocol Loadable {
-    func load() -> Future<Feed, Error>
+protocol FeedLoadable {
+    func load() -> AnyPublisher<Feed, Error>
 }
 
 struct Feed {
-    let title: String
+    let title: String?
     let content: Content
     
     enum Content {
@@ -24,7 +24,7 @@ struct Feed {
 }
 
 enum FeedItem {
-    case articleTeaser
-    case ad
-    case widget
+    case articleTeaser(title: String)
+    case ad(id: String)
+    case widget(type: String)
 }

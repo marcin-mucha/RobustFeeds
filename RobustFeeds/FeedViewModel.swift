@@ -23,10 +23,10 @@ final class FeedViewModel: FeedViewModelType {
     
     let state: CurrentValueSubject<State, Never> = .init(.loading)
     
-    private let loader: Loadable
+    private let loader: FeedLoadable
     private var subscriptions: Set<AnyCancellable> = []
     
-    init(loader: Loadable) {
+    init(loader: FeedLoadable) {
         self.loader = loader
     }
     

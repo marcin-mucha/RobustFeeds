@@ -52,7 +52,7 @@ final class FeedViewController: UIViewController {
             case .native(let items):
                 currentViewController = NativeFeedViewController(title: feed.title, feedItems: items)
             case .web(let url):
-                currentViewController = WebFeedViewController(url: url)
+                currentViewController = WebFeedViewController(url: url, title: feed.title)
             }
         }
     }

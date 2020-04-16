@@ -1,0 +1,53 @@
+{
+    "title": "Economy",
+    "items": [
+        {
+            "type": "teaser",
+            "title": "Dow sees largest three-day percentage gain since 1931"
+        },
+        {
+            "type": "teaser",
+            "title": "Who qualifies to receive money from stimulus package?"
+        },
+        {
+            "type": "ad",
+            "id": "123"
+        },
+        {
+            "type": "teaser",
+            "title": "Trump pushes to reopen US economy by Easter"
+        },
+        {
+            "type": "teaser",
+            "title": "What is the STOCK Act?"
+        },
+        {
+            "type": "widget",
+            "subtype": "carousel"
+        },
+        {
+            "type": "ad",
+            "id": "276"
+        },
+        {
+            "type": "teaser",
+            "title": "Investors uneasy despite promise of economic stimulus"
+        },
+        {
+            "type": "teaser",
+            "title": "Wall Street sell-off continues as investors wait for stimulus package from Washington"
+        },
+        {
+            "type": "teaser",
+            "title": "5-hour prison hostage standoff in Ireland ends after candy bar exchange"
+        },
+        {
+            "type": "ad",
+            "id": "276"
+        },
+        {
+            "type": "teaser",
+            "title": "Richard Rossow on President Trump’s trip to India"
+        }
+    ]
+}

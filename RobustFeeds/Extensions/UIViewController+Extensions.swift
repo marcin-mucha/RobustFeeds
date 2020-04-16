@@ -10,15 +10,15 @@ import UIKit
 
 extension UIViewController {
     func add(_ child: UIViewController) {
-        addChild(child)
-        view.addSubview(child.view)
-        child.didMove(toParent: self)
+        addChild(child) // 1
+        view.addSubview(child.view) // 2
+        child.didMove(toParent: self) // 3
     }
     func remove() {
         if parent != nil {
-            willMove(toParent: nil)
-            removeFromParent()
+            willMove(toParent: nil) // 1
+            removeFromParent() // 2
         }
-        view.removeFromSuperview()
+        view.removeFromSuperview() // 3
     }
 }
