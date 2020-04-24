@@ -17,11 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         self.window = window
         window.windowScene = windowScene
         
-        let viewModel = FeedViewModel(loader:
-            EconomyLoader(jsonName: "EconomyJSON")
-        )
-        let viewController = FeedViewController(viewModel: viewModel)
-        window.rootViewController = UINavigationController(rootViewController: viewController)
+        window.rootViewController = UINavigationController(rootViewController: HomeViewController())
         window.makeKeyAndVisible()
     }
 }

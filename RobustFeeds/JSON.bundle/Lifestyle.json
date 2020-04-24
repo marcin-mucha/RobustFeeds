@@ -1,0 +1,40 @@
+{
+    "title": "Lifestyle & Nutrition",
+    "renderAsWeb": true,
+    "renderAsWebUrl": "https://www.aftonbladet.se/matdryck",
+    "items": [
+        {
+            "title": "Top 10 healthy storecupboard recipes"
+        },
+        {
+            "title": "Stress relief: How diet and lifestyle can help"
+        },
+        {
+            "title": "Healthy breakfast recipes"
+        },
+        {
+            "title": "Healthy freezable recipes"
+        },
+        {
+            "title": "How to work out at home"
+        },
+        {
+            "title": "276"
+        },
+        {
+            "title": "Creamy pesto & kale pasta"
+        },
+        {
+            "title": "Super smoky bacon & tomato spaghetti"
+        },
+        {
+            "title": "Kidney bean curry"
+        },
+        {
+            "title": "Masala frittata with avocado salsa"
+        },
+        {
+            "title": "Jerk-style chicken pilaf"
+        }
+    ]
+}

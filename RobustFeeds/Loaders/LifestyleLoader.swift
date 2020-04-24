@@ -11,19 +11,19 @@ import Combine
 
 struct LifestylePage: Decodable {
     let title: String
-    let teasers: [Teaser]
+    let items: [Item]
     
     let renderAsWeb: Bool
     let renderAsWebUrl: URL?
     
-    struct Teaser: Decodable {
+    struct Item: Decodable {
         let title: String
     }
 }
 
 struct LifestyleLoader: FeedLoadable {
-    private let jsonName: String
-    private let transform: ([FeedItem]) -> [FeedItem]
+    let jsonName: String
+    let transform: ([FeedItem]) -> [FeedItem]
     
     func load() -> AnyPublisher<Feed, Error> {
         let future: Future<LifestylePage, Error> = WebService.load(jsonName: jsonName)
@@ -31,7 +31,7 @@ struct LifestyleLoader: FeedLoadable {
             if page.renderAsWeb, let renderAsWebUrl = page.renderAsWebUrl {
                 return Feed(title: page.title, content: .web(renderAsWebUrl))
             } else {
-                let feedItems = page.teasers.map(\.asFeedItem)
+                let feedItems = page.items.map(\.asFeedItem)
                 let transformedFeedItems = transform(feedItems)
                 return Feed(title: page.title, content: .native(transformedFeedItems))
             }
@@ -40,7 +40,7 @@ struct LifestyleLoader: FeedLoadable {
     }
 }
 
-private extension LifestylePage.Teaser {
+private extension LifestylePage.Item {
     var asFeedItem: FeedItem {
         return .articleTeaser(title: title)
     }

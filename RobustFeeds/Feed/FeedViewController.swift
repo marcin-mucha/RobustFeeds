@@ -45,8 +45,8 @@ final class FeedViewController: UIViewController {
         switch state {
         case .loading:
             currentViewController = LoadingViewController()
-        case .error:
-            currentViewController = ErrorViewController()
+        case .error(let error):
+            currentViewController = ErrorViewController(errorMessage: error.localizedDescription)
         case .feed(let feed):
             switch feed.content {
             case .native(let items):

@@ -12,11 +12,13 @@ private enum Error: Swift.Error {
     case missingFile
 }
 
-extension Data {
-    init(jsonNamed name: String) throws {
-        guard let url = Bundle.main.url(forResource: name, withExtension: "json") else {
-            throw Error.missingFile
-        }
+public extension Data {
+    init(jsonNamed name: String, bundleName: String = "JSON") throws {
+        guard let jsonBundleUrl = Bundle.main.url(forResource: bundleName, withExtension: "bundle"),
+              let jsonBundle = Bundle(url: jsonBundleUrl),
+              let url = jsonBundle.url(forResource: name, withExtension: "json") else {
+                throw Error.missingFile
+              }
         try self.init(contentsOf: url)
     }
 }

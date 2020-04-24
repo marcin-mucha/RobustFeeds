@@ -10,8 +10,8 @@ import Foundation
 import Combine
 
 struct WebLoader: FeedLoadable {
-    private let url: URL
-    private let title: String?
+    let url: URL
+    let title: String?
     
     func load() -> AnyPublisher<Feed, Error> {
         return Result.Publisher(.success(Feed(title: title, content: .web(url))))

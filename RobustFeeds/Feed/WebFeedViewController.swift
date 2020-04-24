@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import WebKit
 
 final class WebFeedViewController: UIViewController {
     private let url: URL
+    private let webView = WKWebView(frame: .zero)
+    
     init(url: URL, title: String?) {
         self.url = url
         super.init(nibName: nil, bundle: nil)
@@ -22,6 +25,13 @@ final class WebFeedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .brown
+        view.addSubview(webView)
+        webView.clipsToBounds = true
+        webView.load(URLRequest(url: url))
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        webView.frame = view.bounds
     }
 }
