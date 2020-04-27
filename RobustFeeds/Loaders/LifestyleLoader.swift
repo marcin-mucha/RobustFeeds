@@ -13,7 +13,7 @@ struct LifestylePage: Decodable {
     let title: String
     let items: [Item]
     
-    let renderAsWeb: Bool
+    let renderAsWeb: Bool //= Bool.random()
     let renderAsWebUrl: URL?
     
     struct Item: Decodable {

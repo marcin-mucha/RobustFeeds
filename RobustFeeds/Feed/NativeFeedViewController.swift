@@ -45,47 +45,43 @@ class NativeFeedViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch feedItems[indexPath.row] {
         case .articleTeaser:
-            return 88
+            return UITableView.automaticDimension
         case .ad:
             return 120
         case .widget:
-            return 140
+            return 180
         }
     }
 }
 
 class FeedCell: UITableViewCell {
-    private let titleLabel = UILabel()
-    
     func configure(with item: FeedItem) {
         let title: String
         let color: UIColor
         switch item {
-        case .articleTeaser:
-            title = "This is an article teaser."
+        case .articleTeaser(let teaserTitle):
+            title = teaserTitle
             color = .white
+            textLabel?.font = UIFont.systemFont(ofSize: 22, weight: .bold)
+            textLabel?.textAlignment = .left
         case .ad:
             title = "ADVERTISMENT"
             color = .yellow
-        case .widget:
-            title = "WIDGET"
+            textLabel?.font = UIFont.systemFont(ofSize: 12, weight: .thin)
+            textLabel?.textAlignment = .center
+        case .widget(let type):
+            title = "WIDGET of type \(type)"
             color = .cyan
+            textLabel?.font = UIFont.systemFont(ofSize: 16)
+            textLabel?.textAlignment = .center
         }
-        titleLabel.text = title
+        textLabel?.text = title
         contentView.backgroundColor = color
     }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        contentView.addSubview(titleLabel)
-        
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor),
-            titleLabel.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor),
-            titleLabel.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor),
-            titleLabel.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor)
-        ])
+        textLabel?.numberOfLines = 0
     }
     
     required init?(coder: NSCoder) {
