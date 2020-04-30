@@ -55,6 +55,7 @@ final class FeedViewController: UIViewController {
                 currentViewController = WebFeedViewController(url: url, title: feed.title)
             }
         }
+        title = currentViewController?.title
     }
     
     private func updateChildren(add viewController: UIViewController?, remove oldViewController: UIViewController?) {

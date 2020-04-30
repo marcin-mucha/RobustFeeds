@@ -12,7 +12,7 @@ import Combine
 class WebService {
     static func load<T: Decodable>(jsonName: String) -> Future<T, Error> {
         return Future { completion in
-            DispatchQueue.global().asyncAfter(deadline: .now() + 2) {
+            DispatchQueue.global().asyncAfter(deadline: .now() + 1) {
                 do {
                     let data = try Data(jsonNamed: jsonName)
                     let page = try JSONDecoder().decode(T.self, from: data)
